@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="project.com.iwantapet">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainScreen" />
+        <activity android:name=".RegisterActivity" />
+        <activity
+            android:name=".AdoptFiller"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".DiscussionActivity" />
+        <activity android:name=".DiscussFiller" />
+        <activity android:name=".LnfActivity"></activity>
+    </application>
+
+</manifest>

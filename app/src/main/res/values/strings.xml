@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">I want a Pet</string>
+    <string name="auth_failed">Authentication Failed.</string>
+    <string name="auth_success">Authentication Successful</string>
+    <string name="post_success">Posted</string>
+    <string-array name="lnf_array">
+        <item>Lost</item>
+        <item>Found</item>
+    </string-array>
+</resources>
