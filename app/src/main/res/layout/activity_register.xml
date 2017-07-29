@@ -4,15 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#01A2DE"
     tools:context="project.com.iwantapet.RegisterActivity">
 
+    <Button
+        android:id="@+id/submit_button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#3875"
+        android:text="Register"
+        android:textColor="#04580B"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="405dp" />
+
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="371dp"
-        android:layout_height="394dp"
-        android:layout_marginTop="0dp"
+        android:layout_height="194dp"
+        android:layout_marginTop="158dp"
+        android:background="#3875"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="8dp"
-        android:id="@+id/scrollView2">
+        tools:layout_editor_absoluteX="7dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,11 +37,12 @@
 
             <EditText
                 android:id="@+id/f_name_register"
-                android:layout_width="match_parent"
+                android:layout_width="369dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="First Name"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorHint="#04580B" />
 
             <EditText
                 android:id="@+id/l_name_register"
@@ -33,7 +50,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Last Name"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorHint="#04580B" />
 
             <EditText
                 android:id="@+id/email_register"
@@ -41,7 +59,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="E-mail"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColorHint="#04580B" />
 
             <EditText
                 android:id="@+id/password_register"
@@ -49,18 +68,10 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColorHint="#04580B" />
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/submit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Button"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        tools:layout_editor_absoluteX="133dp" />
 
 </android.support.constraint.ConstraintLayout>
