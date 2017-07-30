@@ -59,6 +59,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "205088352262-j5tneahaqlqnc8ji7of1iqrcai8oo904.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "project.com.iwantapet",
+            "certificate_hash": "cbb0f570a38ccfcc4f2ca9978aae1aff59b1c984"
+          }
+        },
+        {
           "client_id": "205088352262-9tft9bbifisvk8c474arimdnrok94abf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
