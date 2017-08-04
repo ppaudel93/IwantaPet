@@ -32,6 +32,7 @@ public class AdoptFiller extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private StorageReference mStorageRef;
     Uri imageUri;
+    public static String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,9 +90,10 @@ public class AdoptFiller extends AppCompatActivity {
         petnames=petname.getText().toString();
         petages=petage.getText().toString();
         descr=desc.getText().toString();
-        Adoptinfo post1= new Adoptinfo(email,pettypes,petnames,petages,descr);
         DatabaseReference mD = FirebaseDatabase.getInstance().getReference("posts");
         String postid=mD.push().getKey();
+        Adoptinfo post1= new Adoptinfo(email,pettypes,petnames,petages,descr,postid);
+        id = postid;
         mD.child(postid).setValue(post1);
         StorageReference petref = mStorageRef.child("adopt/"+email+postid);
         petref.putFile(imageUri);
