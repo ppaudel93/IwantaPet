@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="project.com.iwantapet.PostDetails">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="495dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="144dp">
+
+            <ImageView
+                android:id="@+id/pet_image_view"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="90dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_light_frame" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/uploader_view"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:text="Uploader:"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/uploader_name"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="test"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pet_type_view"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:text="Pet Type:"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/pet_type"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="test"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.05"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pet_name_view"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:text="Pet Name:"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/pet_name"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="test"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pet_age_view"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:text="Pet Age:"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/pet_age"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="test"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/desc_view"
+                android:layout_width="172dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Description:"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="test"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Back"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
