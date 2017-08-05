@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="project.com.iwantapet.DisplayDescriptionPost">
+
+    <ScrollView
+        android:layout_width="365dp"
+        android:layout_height="423dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/mainlinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/titl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#66ccff"
+                android:text="Title:"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_discview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="#66ffb3"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                app:layout_constraintLeft_toRightOf="@+id/titl"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="49dp"
+                android:background="#66ccff"
+                android:text="Description:"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titl" />
+
+            <TextView
+                android:id="@+id/description_discview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:background="#66ffb3"
+                android:text="TextView"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="361dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginRight="8dp"
+        android:text="OK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/comment"
+        android:layout_marginEnd="8dp" />
+
+</android.support.constraint.ConstraintLayout>

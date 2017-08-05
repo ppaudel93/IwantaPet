@@ -1,6 +1,7 @@
 package project.com.iwantapet;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -59,6 +60,10 @@ public class MainScreen extends AppCompatActivity {
                 petemail.setText(post1.pemail);
                 horizon.addView(pettype);
                 horizon.addView(petemail);
+                int lblue = Color.parseColor("#66ccff");
+                horizon.setBackgroundColor(lblue);
+                LinearLayout.LayoutParams lay = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                lay.setMargins(5,10,0,10);
                 horizon.isClickable();
                 horizon.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -69,7 +74,7 @@ public class MainScreen extends AppCompatActivity {
                         startActivity(intent);
                     }
                 });
-                postlayout.addView(horizon);
+                postlayout.addView(horizon,lay);
             }
 
             @Override
