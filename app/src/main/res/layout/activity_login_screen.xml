@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#01A2DE"
+    android:background="#216D86"
     tools:context="project.com.iwantapet.LoginScreen">
+
 
     <EditText
         android:id="@+id/email_Login"
-        android:layout_width="211dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="161dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="166dp"
         android:ems="10"
         android:hint="Email"
-        android:textColorHint="#04580B"
         android:inputType="textEmailAddress"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="154dp" />
+        tools:layout_editor_absoluteX="85dp" />
 
     <EditText
         android:id="@+id/password_Login"
@@ -27,7 +26,6 @@
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Password"
-        android:textColorHint="#04580B"
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@+id/email_Login"
         tools:layout_editor_absoluteX="74dp" />
@@ -38,22 +36,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Sign In"
-        android:background="#3875"
-        android:textColor="#04580B"
+        android:background="#10A0B5"
         app:layout_constraintTop_toBottomOf="@+id/password_Login"
-        tools:layout_editor_absoluteX="157dp" />
+        tools:layout_editor_absoluteX="148dp" />
 
     <Button
         android:id="@+id/registerbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:text="Register"
-        android:textColor="#04580B"
-        android:background="#3875"
+        android:background="#10A0B5"
         app:layout_constraintTop_toBottomOf="@+id/signinbutton"
-        tools:layout_editor_absoluteX="157dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.058" />
+        tools:layout_editor_absoluteX="148dp" />
+
 </android.support.constraint.ConstraintLayout>

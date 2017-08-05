@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#216D86"
     tools:context="project.com.iwantapet.DiscussionActivity">
 
     <Button
@@ -13,6 +14,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="100dp"
         android:text="Create Discussion"
+        android:background="#10A0A5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="100dp" />
@@ -30,8 +32,11 @@
         app:layout_constraintBottom_toTopOf="@+id/create_forum">
 
         <LinearLayout
+            android:id="@+id/postvertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+        </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

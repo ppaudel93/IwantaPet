@@ -23,7 +23,9 @@
             android:windowSoftInputMode="adjustPan" />
         <activity android:name=".DiscussionActivity" />
         <activity android:name=".DiscussFiller" />
-        <activity android:name=".LnfActivity"></activity>
+        <activity android:name=".LnfActivity" />
+        <activity android:name=".PostDetails" />
+        <activity android:name=".DisplayDescriptionPost"></activity>
     </application>
 
 </manifest>

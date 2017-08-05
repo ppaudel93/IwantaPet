@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#216D86"
-    tools:context="project.com.iwantapet.LnfActivity">
+    tools:context="project.com.iwantapet.PostDetails">
 
     <ScrollView
         android:id="@+id/scrollView3"
@@ -13,9 +13,7 @@
         android:layout_height="495dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,30 +22,12 @@
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="144dp">
 
-            <Spinner
-                android:id="@+id/lnf_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="25dp"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <ImageView
-                android:id="@+id/pet_image_lnf"
+                android:id="@+id/pet_image_view"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_marginLeft="90dp"
                 app:srcCompat="@android:drawable/editbox_dropdown_light_frame" />
-
-            <Button
-                android:id="@+id/open_camera_lnf"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginLeft="150dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="0.60"
-                android:background="@android:drawable/ic_menu_camera" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -55,20 +35,46 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/pet_type_lnf"
+                    android:id="@+id/uploader_view"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:text="Uploader:"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/uploader_name"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="test"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pet_type_view"
                     android:layout_width="172dp"
                     android:layout_height="50dp"
                     android:text="Pet Type:"
                     android:textColor="#000000"
                     android:textSize="30sp" />
 
-                <EditText
-                    android:id="@+id/pet_type_filler_lnf"
+                <TextView
+                    android:id="@+id/pet_type"
                     android:layout_width="172dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="Dog, Cat, .."
-                    android:inputType="text" />
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="test"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -78,20 +84,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/pet_name_lnf"
+                    android:id="@+id/pet_name_view"
                     android:layout_width="172dp"
                     android:layout_height="50dp"
                     android:text="Pet Name:"
                     android:textColor="#000000"
                     android:textSize="30sp" />
 
-                <EditText
-                    android:id="@+id/pet_name_filler_lnf"
+                <TextView
+                    android:id="@+id/pet_name"
                     android:layout_width="172dp"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:hint="(optional)"
-                    android:inputType="text" />
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="test"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -100,10 +107,27 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/pet_age_view"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:text="Pet Age:"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/pet_age"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="test"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
+
             </LinearLayout>
 
             <TextView
-                android:id="@+id/desc_lnf"
+                android:id="@+id/desc_view"
                 android:layout_width="172dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
@@ -111,19 +135,20 @@
                 android:textColor="#000000"
                 android:textSize="30sp" />
 
-            <EditText
-                android:id="@+id/desc_filler_lnf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="where it was lost/found, etc"
-                android:inputType="textMultiLine" />
-
-            <Button
-                android:id="@+id/post_button_lnf"
+            <TextView
+                android:id="@+id/desc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Post"
+                android:layout_weight="1"
+                android:text="test"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Back"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 
