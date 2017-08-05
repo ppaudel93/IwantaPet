@@ -4,14 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#216D86"
     tools:context="project.com.iwantapet.LnfActivity">
 
-    <Spinner
-        android:id="@+id/lnf_spinner"
-        android:layout_width="162dp"
-        android:layout_height="53dp"
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="495dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="26dp" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="144dp">
+
+            <Spinner
+                android:id="@+id/lnf_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/pet_image_lnf"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginLeft="90dp"
+                app:srcCompat="@android:drawable/editbox_dropdown_light_frame" />
+
+            <Button
+                android:id="@+id/open_camera_lnf"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.60"
+                android:background="@android:drawable/ic_menu_camera" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pet_type_lnf"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:text="Pet Type:"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/pet_type_filler_lnf"
+                    android:layout_width="172dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Dog, Cat, .."
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.05"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/pet_name_lnf"
+                    android:layout_width="172dp"
+                    android:layout_height="50dp"
+                    android:text="Pet Name:"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/pet_name_filler_lnf"
+                    android:layout_width="172dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="(optional)"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/desc_lnf"
+                android:layout_width="172dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Description:"
+                android:textColor="#000000"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/desc_filler_lnf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="where it was lost/found, etc"
+                android:inputType="textMultiLine" />
+
+            <Button
+                android:id="@+id/post_button_lnf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Post"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>

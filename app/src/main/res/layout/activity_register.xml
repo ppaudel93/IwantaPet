@@ -4,15 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#216D86"
     tools:context="project.com.iwantapet.RegisterActivity">
 
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Register"
+        android:background="#10A0B5"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        tools:layout_editor_absoluteX="133dp" />
+
     <ScrollView
-        android:layout_width="371dp"
-        android:layout_height="394dp"
-        android:layout_marginTop="0dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="346dp"
+        android:layout_height="252dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="171dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="8dp"
-        android:id="@+id/scrollView2">
+        app:layout_constraintHorizontal_bias="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,14 +69,5 @@
 
         </LinearLayout>
     </ScrollView>
-
-    <Button
-        android:id="@+id/submit_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Button"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        tools:layout_editor_absoluteX="133dp" />
 
 </android.support.constraint.ConstraintLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#216D86"
     tools:context="project.com.iwantapet.DiscussFiller">
 
     <EditText
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Title"
+        android:textColorHint="#04580B"
         android:inputType="text"
         android:layout_marginLeft="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -26,6 +28,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Description"
+        android:textColorHint="#40580B"
         android:inputType="textMultiLine"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/discuss_title" />
@@ -37,6 +40,8 @@
         android:layout_marginLeft="140dp"
         android:layout_marginTop="200dp"
         android:text="Post"
+        android:textColor="#04580B"
+        android:background="#3875"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/discuss_descr" />
 </android.support.constraint.ConstraintLayout>
