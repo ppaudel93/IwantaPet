@@ -4,17 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#216D86"
     tools:context="project.com.iwantapet.LoginScreen">
+
 
     <EditText
         android:id="@+id/email_Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="166dp"
         android:ems="10"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="74dp" />
+        tools:layout_editor_absoluteX="85dp" />
 
     <EditText
         android:id="@+id/password_Login"
@@ -22,6 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@+id/email_Login"
         tools:layout_editor_absoluteX="74dp" />
@@ -32,15 +36,18 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Sign In"
+        android:background="#10A0B5"
         app:layout_constraintTop_toBottomOf="@+id/password_Login"
-        tools:layout_editor_absoluteX="157dp" />
+        tools:layout_editor_absoluteX="148dp" />
 
     <Button
         android:id="@+id/registerbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:text="Register"
+        android:background="#10A0B5"
         app:layout_constraintTop_toBottomOf="@+id/signinbutton"
-        tools:layout_editor_absoluteX="157dp" />
+        tools:layout_editor_absoluteX="148dp" />
+
 </android.support.constraint.ConstraintLayout>
