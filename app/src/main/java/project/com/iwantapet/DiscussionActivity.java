@@ -32,7 +32,6 @@ public class DiscussionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_discussion);
         Button creatediscuss = (Button)findViewById(R.id.create_forum);
         myRef.keepSynced(true);
-        LinearLayout mainlayout = (LinearLayout)findViewById(R.id.postvertical);
         myRef.child("discusspost").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
@@ -57,7 +56,7 @@ public class DiscussionActivity extends AppCompatActivity {
                 subtitle.setBackgroundColor(lblue);
                 subdesc.setBackgroundColor(lgreen);
                 LinearLayout.LayoutParams lay = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                lay.setMargins(5,10,0,10);
+                lay.setMargins(5,5,5,5);
                 subtitle.addView(titletext);
                 subdesc.addView(desctext);
                 sublayout.addView(subtitle);

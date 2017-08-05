@@ -148,6 +148,7 @@
                 android:id="@+id/back_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#10A0B5"
                 android:text="Back"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
