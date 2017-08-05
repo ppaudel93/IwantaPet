@@ -38,9 +38,9 @@ public class DiscussFiller extends AppCompatActivity {
         desctext=(TextView)findViewById(R.id.discuss_descr);
         title=titletext.getText().toString();
         desc=desctext.getText().toString();
-        Postinfo post1=new Postinfo(title,desc,email);
         DatabaseReference mD=FirebaseDatabase.getInstance().getReference("discusspost");
         String discusspostid=mD.push().getKey();
+        Postinfo post1=new Postinfo(title,desc,email,discusspostid);
         mD.child(discusspostid).setValue(post1);
         final Intent intent =new Intent(DiscussFiller.this,DiscussionActivity.class);
         Toast.makeText(DiscussFiller.this, R.string.post_success,

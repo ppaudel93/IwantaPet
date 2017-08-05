@@ -30,8 +30,11 @@
         app:layout_constraintBottom_toTopOf="@+id/create_forum">
 
         <LinearLayout
+            android:id="@+id/postvertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+        </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
