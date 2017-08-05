@@ -96,6 +96,7 @@
         android:layout_marginBottom="13dp"
         android:layout_marginRight="8dp"
         android:text="OK"
+        android:background="#10A0B5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="@+id/comment"
         android:layout_marginEnd="8dp" />
