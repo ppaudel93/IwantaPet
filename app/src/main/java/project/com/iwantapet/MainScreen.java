@@ -127,7 +127,7 @@ public class MainScreen extends AppCompatActivity {
         lnfbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Intent intent = new Intent(MainScreen.this,LnfActivity.class);
+                final Intent intent = new Intent(MainScreen.this,LandFmain.class);
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override

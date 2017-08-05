@@ -9,13 +9,15 @@
 
     <ScrollView
         android:id="@+id/scrollView3"
-        android:layout_width="0dp"
-        android:layout_height="495dp"
+        android:layout_width="343dp"
+        android:layout_height="567dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="-13dp"
-        app:layout_constraintHorizontal_bias="0.0">
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,7 +31,7 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_marginLeft="90dp"
-                app:srcCompat="@android:drawable/editbox_dropdown_light_frame" />
+                app:srcCompat="@drawable/petimagedefault" />
 
             <Button
                 android:id="@+id/open_camera"
@@ -59,8 +61,9 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Dog, Cat, .."
-                    android:textColorHint="#04580B"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
             </LinearLayout>
 
             <LinearLayout
@@ -83,8 +86,9 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="(optional)"
-                    android:textColorHint="#04580B"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
             </LinearLayout>
 
@@ -107,8 +111,9 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="7w,1y... (optional)"
-                    android:textColorHint="#04580B"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
 
             </LinearLayout>
 
@@ -127,16 +132,17 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="address, contact info, other descriptions"
-                android:textColorHint="#04580B"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:textColor="#000000"
+                android:textColorHint="#000000" />
 
             <Button
                 android:id="@+id/post_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="#10A0B5"
                 android:text="Post"
-                android:textColor="#04580B"
-                android:background="#3875"
+                android:textColor="#000000"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
 

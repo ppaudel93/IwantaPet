@@ -11,14 +11,15 @@
         android:id="@+id/discuss_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Title"
-        android:textColorHint="#04580B"
         android:inputType="text"
-        android:layout_marginLeft="16dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/discuss_descr"
@@ -28,8 +29,9 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Description"
-        android:textColorHint="#40580B"
         android:inputType="textMultiLine"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/discuss_title" />
 
@@ -39,9 +41,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="140dp"
         android:layout_marginTop="200dp"
+        android:background="#10A0B5"
         android:text="Post"
-        android:textColor="#04580B"
-        android:background="#3875"
+        android:textColor="#000000"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/discuss_descr" />
 </android.support.constraint.ConstraintLayout>

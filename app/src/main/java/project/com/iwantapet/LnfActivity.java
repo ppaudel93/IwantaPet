@@ -1,7 +1,10 @@
 package project.com.iwantapet;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -27,16 +30,15 @@ public class LnfActivity extends AppCompatActivity {
     private ImageView imageView;
     private DatabaseReference mDatabase;
     private StorageReference mStorageRef;
-    EditText type,name,description;
+    EditText type2,name2,description;
     Button post;
     Uri imageUri;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lnf);
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        this.imageView = (ImageView)this.findViewById(R.id.pet_image);
+        this.imageView = (ImageView)this.findViewById(R.id.pet_image_lnf);
         mStorageRef = FirebaseStorage.getInstance().getReference();
         Button takephoto=(Button)findViewById(R.id.open_camera_lnf);
         Spinner lnf=(Spinner)findViewById(R.id.lnf_spinner);
@@ -79,7 +81,39 @@ public class LnfActivity extends AppCompatActivity {
         return ret;
     }
     public void postlnf(){
-        String status,type,name,poster,description,key;
+        String status,type,name,poster,descriptions,key;
+        type2 = (EditText)findViewById(R.id.pet_type_filler_lnf);
+        name2=(EditText)findViewById(R.id.pet_name_filler_lnf);
+        poster=email;
+        description=(EditText)findViewById(R.id.desc_filler_lnf);
+        Spinner lnf=(Spinner)findViewById(R.id.lnf_spinner);
+        status=lnf.getSelectedItem().toString();
+        name=name2.getText().toString();
+        type=type2.getText().toString();
+        descriptions=description.getText().toString();
+        DatabaseReference mD = FirebaseDatabase.getInstance().getReference("lnf");
+        key = mD.push().getKey();
+        final LnfPostInfo lnfpost = new LnfPostInfo(status,type,name,poster,descriptions,key);
+        mD.child(key).setValue(lnfpost);
+        StorageReference lnfref = mStorageRef.child("lnf/"+email+key);
+        lnfref.putFile(imageUri);
+        Toast.makeText(LnfActivity.this, R.string.post_success,
+                Toast.LENGTH_SHORT).show();
+        final Intent intent = new Intent(LnfActivity.this,LandFmain.class);
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                startActivity(intent);
+                finish();
+            }
+        }, 1000);
 
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == CAMERA_REQUEST && resultCode == Activity.RESULT_OK) {
+            imageUri = data.getData();
+            Bitmap photo = (Bitmap) data.getExtras().get("data");
+            imageView.setImageBitmap(photo);
+        }
     }
 }

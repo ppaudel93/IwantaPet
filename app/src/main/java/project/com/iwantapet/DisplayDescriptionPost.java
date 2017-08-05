@@ -55,8 +55,8 @@ public class DisplayDescriptionPost extends AppCompatActivity {
                 commenter.setText(comment1.commenter);
                 secondary.addView(comment);
                 secondary.addView(commenter);
-                int red = Color.parseColor("#ff3333");
-                secondary.setBackgroundColor(red);
+                int orange = Color.parseColor("#ff6600");
+                secondary.setBackgroundColor(orange);
                 LinearLayout.LayoutParams lay = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
                 lay.setMargins(5,10,0,10);
                 main.addView(secondary,lay);
