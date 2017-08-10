@@ -1,5 +1,7 @@
 package project.com.iwantapet;
 
+import android.net.Uri;
+
 /**
  * Created by prayog on 7/1/17.
  */

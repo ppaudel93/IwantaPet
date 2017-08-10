@@ -55,7 +55,7 @@ public class DisplayDescriptionPost extends AppCompatActivity {
                 commenter.setText(comment1.commenter);
                 secondary.addView(comment);
                 secondary.addView(commenter);
-                int orange = Color.parseColor("#ff6600");
+                int orange = Color.parseColor("#81b73c");
                 secondary.setBackgroundColor(orange);
                 LinearLayout.LayoutParams lay = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
                 lay.setMargins(5,10,0,10);
@@ -124,6 +124,7 @@ public class DisplayDescriptionPost extends AppCompatActivity {
         mD.child(id).setValue(comment1);
         Toast.makeText(DisplayDescriptionPost.this, R.string.post_success,
                 Toast.LENGTH_SHORT).show();
+        com.setText(null);
 
     }
 

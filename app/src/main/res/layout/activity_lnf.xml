@@ -69,7 +69,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Dog, Cat, .."
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColorHint="@color/hintcolor" />
             </LinearLayout>
 
             <LinearLayout
@@ -92,7 +93,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="(optional)"
-                    android:inputType="text" />
+                    android:inputType="text"
+                    android:textColorHint="@color/hintcolor" />
 
             </LinearLayout>
 
@@ -111,7 +113,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="where it was lost/found, etc"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:textColorHint="@color/hintcolor" />
 
             <Button
                 android:id="@+id/post_button_lnf"

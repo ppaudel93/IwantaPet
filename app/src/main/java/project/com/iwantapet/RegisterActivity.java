@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,27 +20,42 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import static project.com.iwantapet.DiscussionActivity.discpost;
+
 public class RegisterActivity extends AppCompatActivity {
-    private static final String TAG ="EmailPassword" ;
     private DatabaseReference mDatabase;
-    private TextView memail;
-    private TextView mpassword;
-    private TextView mfname;
-    private TextView mlname;
+    private EditText memail;
+    private EditText mpassword;
+    private EditText mfname;
+    private EditText mlname;
     private Button submitbutton;
     private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        memail=(TextView)findViewById(R.id.email_register);
-        mpassword=(TextView)findViewById(R.id.password_register);
-        mfname=(TextView)findViewById(R.id.f_name_register);
-        mlname=(TextView)findViewById(R.id.l_name_register);
-        submitbutton=(Button)findViewById(R.id.submit_button);
         mAuth=FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        memail=(EditText) findViewById(R.id.email_register);
+        mpassword=(EditText) findViewById(R.id.password_register);
+        mfname=(EditText) findViewById(R.id.f_name_register);
+        mlname=(EditText) findViewById(R.id.l_name_register);
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    // User is signed in
+                    Log.d("signed in:",user.getUid());
+                } else {
+                    // User is signed out
+                }
+                // ...
+            }
+        };
+        submitbutton=(Button)findViewById(R.id.submit_button);
         submitbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,16 +65,28 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
+    }
     public void createaccount(){
         String email,password,fname,lname;
+        mAuth=FirebaseAuth.getInstance();
         email=memail.getText().toString();
         password=mpassword.getText().toString();
         fname=mfname.getText().toString();
         lname=mlname.getText().toString();
-        Userinfo user1 = new Userinfo(fname,lname,email);
-        DatabaseReference mD = FirebaseDatabase.getInstance().getReference("users");
-        String userid=mD.push().getKey();
-        mD.child(userid).setValue(user1);
+        final DatabaseReference mD = FirebaseDatabase.getInstance().getReference("users");
+        final String userid=mD.push().getKey();
+        final Userinfo user1 = new Userinfo(fname,lname,email,userid);
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -66,6 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()){
                             Toast.makeText(RegisterActivity.this, R.string.auth_success,
                                     Toast.LENGTH_SHORT).show();
+                            mD.child(userid).setValue(user1);
                             final Intent intent = new Intent(RegisterActivity.this,LoginScreen.class);
                             Handler handler = new Handler();
                             handler.postDelayed(new Runnable() {
