@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/mainpost_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -139,21 +140,37 @@
                 android:id="@+id/desc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
                 android:layout_weight="1"
                 android:text="test"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
-            <Button
-                android:id="@+id/back_button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#10A0B5"
-                android:text="Back"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/scrollView3" />
-
         </LinearLayout>
     </ScrollView>
+
+    <EditText
+        android:id="@+id/postdetails_comment"
+        android:layout_width="276dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="0dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/ok_postdetails"
+        android:layout_width="62dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#10A0B5"
+        android:text="OK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/postdetails_comment"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -41,7 +41,6 @@ public class MainScreen extends AppCompatActivity {
         TextView emailinfo =(TextView)findViewById(R.id.email_mainpage);
         emailinfo.setText(email);
         ImageButton adoptbutton = (ImageButton)findViewById(R.id.adopt_mainpage);
-        LinearLayout postlayout = (LinearLayout)findViewById(R.id.postslist);
         myRef.child("posts").addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {

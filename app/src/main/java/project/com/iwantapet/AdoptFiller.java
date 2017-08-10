@@ -33,6 +33,7 @@ public class AdoptFiller extends AppCompatActivity {
     private StorageReference mStorageRef;
     Uri imageUri;
     public static String id;
+    public static String imagedl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +96,7 @@ public class AdoptFiller extends AppCompatActivity {
         Adoptinfo post1= new Adoptinfo(email,pettypes,petnames,petages,descr,postid);
         id = postid;
         mD.child(postid).setValue(post1);
-        StorageReference petref = mStorageRef.child("adopt/"+email+postid);
+        StorageReference petref = mStorageRef.child("adopt/"+email+postid+".jpg");
         petref.putFile(imageUri);
         Toast.makeText(AdoptFiller.this, R.string.post_success,
                 Toast.LENGTH_SHORT).show();

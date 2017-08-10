@@ -3,6 +3,8 @@
     <string name="auth_failed">Authentication Failed.</string>
     <string name="auth_success">Authentication Successful</string>
     <string name="post_success">Posted</string>
+    <string name="download_success">Download Complete</string>
+    <string name="download_failed">Download Failed</string>
     <string-array name="lnf_array">
         <item>Lost</item>
         <item>Found</item>

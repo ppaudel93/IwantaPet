@@ -43,7 +43,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="First Name"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorHint="@color/hintcolor" />
 
             <EditText
                 android:id="@+id/l_name_register"
@@ -51,7 +52,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Last Name"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorHint="@color/hintcolor" />
 
             <EditText
                 android:id="@+id/email_register"
@@ -59,7 +61,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="E-mail"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/hintcolor" />
 
             <EditText
                 android:id="@+id/password_register"
@@ -67,7 +70,8 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColorHint="@color/hintcolor" />
 
         </LinearLayout>
     </ScrollView>
